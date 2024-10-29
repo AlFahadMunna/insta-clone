@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(urlencoded({ extended: true }));
 const corsOrigin = {
-  origin: "http://localhost:5173", //or whatever port your frontend is using
+  origin: process.env.URL, //or whatever port your frontend is using
   credentials: true,
 };
 app.use(cors(corsOrigin));
